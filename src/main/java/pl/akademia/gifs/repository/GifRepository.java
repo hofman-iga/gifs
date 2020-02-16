@@ -63,4 +63,14 @@ public class GifRepository {
                          // i to zwróci metoda
     }
 
+
+    public List<Gif>getGifsByCategoryId(int id){
+        List<Gif> gifFromCat = new ArrayList<>();
+        for (Gif gifId: ALL_GIFS) {
+            if (gifId.getCategoryId() == id){
+                gifFromCat.add(gifId);
+            }
+        }
+        return gifFromCat;
+    }
 }
