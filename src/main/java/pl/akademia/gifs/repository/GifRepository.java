@@ -3,6 +3,7 @@ package pl.akademia.gifs.repository;
 
 import org.springframework.stereotype.Repository;
 import pl.akademia.gifs.model.Gif;
+import sun.net.www.content.image.gif;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,4 +51,16 @@ public class GifRepository {
         }
         return favorites;
     }
+    public Gif getGifByName(String name) {
+
+        for (Gif allGif: ALL_GIFS) {
+                if (allGif.getName().equals(name)) {
+                    return allGif;
+                }
+    }
+        return null; // zwracamy nulla, gdy nie znajdziemy gifa,
+                        // jak znajdzie to pętla zatrzyma się na return allGif
+                         // i to zwróci metoda
+    }
+
 }
