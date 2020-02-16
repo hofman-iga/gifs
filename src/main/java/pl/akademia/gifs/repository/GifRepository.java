@@ -37,15 +37,15 @@ public class GifRepository {
     }
 
     public List<Gif> getFavGifs() { //możemy zrobić strumieniem lub pętlą
-        //return ALL_GIFS.stream()
-        //       .filter(Gif::getFavorite)
-        //      .collect(Collectors.toList());
-        //   }
+       // return ALL_GIFS.stream()
+        //     .filter(Gif::getFavorite)
+         //    .collect(Collectors.toList());
+         // }
 
         List<Gif> favorites = new ArrayList<>();
         for (Gif allGif : ALL_GIFS) {
             if (allGif.getFavorite()) {
-                favorites.add(allGif);
+               favorites.add(allGif);
             }
         }
         return favorites;
