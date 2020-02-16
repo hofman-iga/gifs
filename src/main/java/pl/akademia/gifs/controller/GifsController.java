@@ -50,7 +50,7 @@ public class GifsController {
     }
 
     @GetMapping("/gify")
-    @ResponseBody
+    @ResponseBody  // powoduje ,ze nie wyswietli sie html
     public String showGifs(){
        return gifRepository.getGifNames();
     }
